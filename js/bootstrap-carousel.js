@@ -76,6 +76,13 @@
       this.interval = null
       return this
     }
+  , position: function () {
+      var $active = this.$element.find('.item.active')
+      , children = $active.parent().children()
+      , activePos = children.index($active)
+      return activePos
+
+    }
 
   , next: function () {
       if (this.sliding) return
